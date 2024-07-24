@@ -200,6 +200,7 @@ gen_iptables >$WORKDIR/boot_iptables.sh
 gen_ifconfig >$WORKDIR/boot_ifconfig.sh
 gen_3proxy >/etc/3proxy/3proxy.cfg
 wget -O /etc/rc.d/rc.local https://raw.githubusercontent.com/PhoenixPink/proxy_ipv6/main/rc.local && chmod +x /etc/rc.d/rc.local
+timedatectl set-timezone Asia/Ho_Chi_Minh
 
 chmod +x ${WORKDIR}/boot_*.sh
 chmod +x ${WORKDIR}/*.txt
