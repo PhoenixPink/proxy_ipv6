@@ -93,13 +93,13 @@ setuid 65535
 stacksize 6291456
 flush
 auth none
-$(awk -F "/" '{print "proxy -6 -n -a -p" $2 " -i192.168.1.152" " -e" $1 }' ${WORKDATA})
+$(awk -F "/" '{print "proxy -6 -n -a -p" $2 " -i192.168.1.151" " -e" $1 }' ${WORKDATA})
 EOF
 }
 
 gen_proxy_file() {
 cat <<-EOF
-$(awk -F "/" '{print "192.168.1.152:" $2 }' ${WORKDATA})
+$(awk -F "/" '{print "192.168.1.151:" $2 }' ${WORKDATA})
 EOF
 }
 
@@ -141,7 +141,7 @@ UUID=${uuid}
 DEVICE=ens33
 ONBOOT=yes
 GATEWAY=192.168.1.1
-IPADDR=192.168.1.152
+IPADDR=192.168.1.151
 NETMASK=255.255.255.0
 EOF
 }
