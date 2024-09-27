@@ -193,7 +193,7 @@ read COUNT >$WORKDIR/last_port.txt
 echo "$(<$WORKDIR/last_port.txt)"
 
 FIRST_PORT=27081
-LAST_PORT=$((($FIRST_PORT-1) + $(<$WORKDIR/last_port.txt)))
+LAST_PORT=$((($FIRST_PORT-1) + ($(<$WORKDIR/last_port.txt))))
 #LAST_PORT=$((($FIRST_PORT-1) + 5))
 
 gen_ipv6 >$WORKDIR/ipv6.txt
