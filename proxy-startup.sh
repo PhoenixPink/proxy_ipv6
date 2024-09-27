@@ -187,10 +187,9 @@ mkdir $WORKDIR && cd $_
 IP4=$(curl -4 -s icanhazip.com)
 IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 
-echo "Internal IP = $IP4. IP6 = $IP6"
+echo "Internal IP = ${IP4}. IP6 = ${IP6}"
 echo "How many proxy do you want to create? Example 500"
 read COUNT
-echo "Create Number: $COUNT"
 touch $WORKDIR/last_port.txt
 echo $COUNT >$WORKDIR/last_port.txt
 
