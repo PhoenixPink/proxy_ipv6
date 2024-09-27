@@ -193,7 +193,7 @@ read COUNT
 echo "$COUNT" >$WORKDIR/last_port.txt
 
 FIRST_PORT=27081
-COUNT_LAST_PORT="${WORKDIR}/last_port.txt"
+COUNT_LAST_PORT=$({WORKDIR}/last_port.txt)
 LAST_PORT=$((($FIRST_PORT-1) + $COUNT_LAST_PORT))
 #LAST_PORT=$((($FIRST_PORT-1) + 5))
 
