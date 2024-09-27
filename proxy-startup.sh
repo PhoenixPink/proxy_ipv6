@@ -193,7 +193,6 @@ read COUNT
 touch /last_port.txt
 echo $COUNT >/last_port.txt
 chmod +x /last_port.txt
-echo "$(</last_port.txt)"
 FIRST_PORT=27081
 LAST_PORT=$((($FIRST_PORT-1) + $(</last_port.txt)))
 #LAST_PORT=$((($FIRST_PORT-1) + 5))
