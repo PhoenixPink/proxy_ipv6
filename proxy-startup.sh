@@ -190,9 +190,10 @@ IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 echo "Internal IP = ${IP4}. IP6 = ${IP6}"
 echo "How many proxy do you want to create? Example 500"
 read COUNT
-$COUNT >$WORKDIR/last_port.txt
+echo "$COUNT" >$WORKDIR/last_port.txt
+
 FIRST_PORT=27081
-COUNT_LAST_PORT=$(WORKDIR/last_port.txt)
+COUNT_LAST_PORT="${WORKDIR}/last_port.txt"
 LAST_PORT=$((($FIRST_PORT-1) + $COUNT_LAST_PORT))
 #LAST_PORT=$((($FIRST_PORT-1) + 5))
 
