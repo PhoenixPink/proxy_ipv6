@@ -191,9 +191,8 @@ echo "Internal IP = $IP4. IP6 = $IP6"
 echo "How many proxy do you want to create? Example 500"
 read COUNT
 echo "Create Number: $COUNT"
-cat >$WORKDIR/last_port.txt <<END \
-$COUNT
-END
+touch $WORKDIR/last_port.txt
+echo $COUNT >$WORKDIR/last_port.txt
 
 FIRST_PORT=27081
 LAST_PORT=$((($FIRST_PORT-1) + $(<$WORKDIR/last_port.txt)))
