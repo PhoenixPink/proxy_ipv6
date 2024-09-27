@@ -192,7 +192,8 @@ echo "How many proxy do you want to create? Example 500"
 read COUNT
 touch $WORKDIR/last_port.txt
 echo $COUNT >$WORKDIR/last_port.txt
-
+chmod +x $WORKDIR/last_port.txt
+echo "$(<$WORKDIR/last_port.txt)"
 FIRST_PORT=27081
 LAST_PORT=$((($FIRST_PORT-1) + $(<$WORKDIR/last_port.txt)))
 #LAST_PORT=$((($FIRST_PORT-1) + 5))
