@@ -192,7 +192,7 @@ echo "How many proxy do you want to create? Example 500"
 read COUNT >$WORKDIR/last_port.txt
 COUNT="$WORKDIR/last_port.txt"
 COUNTNUM=${COUNT}
-echo "$COUNT"
+echo "$COUNTNUM"
 
 FIRST_PORT=27081
 LAST_PORT=$((($FIRST_PORT-1) + $COUNTNUM))
