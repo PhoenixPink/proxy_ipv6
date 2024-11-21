@@ -125,7 +125,7 @@ EOF
 ifcfg_ens33() {
 uuid=$(uuidgen)
 cat <<-EOF
-TYPE=Ethernet
+TYPE=Wired
 PROXY_METHOD=none
 BROWSER_ONLY=no
 BOOTPROTO=dhcp
